@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no">
+<title>Hava Durumu</title>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#00c2fe">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Hava Durumu">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="stylesheet" href="weather.css">
+</head>
+<body>
+  <div class="phone">
+    <div class="app">
+      <header class="topbar">
+        <button id="menuBtn" class="icon-btn" aria-label="Şehirler">☰</button>
+        <div class="title">Hava Durumu</div>
+      </header>
+
+      <main class="screen">
+        <section class="hero" id="hero">
+          <div class="city" id="cityName">İstanbul</div>
+          <div class="landmark" id="landmark">📍 Ayasofya</div>
+          <div class="date" id="dateNow"></div>
+          <div class="icon" id="weatherIcon">☀️</div>
+          <div class="temp" id="temp">28°</div>
+          <div class="desc" id="desc">Açık</div>
+          <div class="minmax">
+            <span id="tempMax">En yüksek: 31°</span>
+            <span id="tempMin">En düşük: 22°</span>
+          </div>
+        </section>
+
+        <section class="details">
+          <div class="detail-card">
+            <div class="label">Nem</div>
+            <div class="value" id="humidity">55%</div>
+          </div>
+          <div class="detail-card">
+            <div class="label">Rüzgar</div>
+            <div class="value" id="wind">12 km/s</div>
+          </div>
+          <div class="detail-card">
+            <div class="label">Hissedilen</div>
+            <div class="value" id="feels">30°</div>
+          </div>
+        </section>
+
+        <section class="forecast">
+          <div class="forecast-title">5 Günlük Tahmin</div>
+          <div class="forecast-list" id="forecastList"></div>
+        </section>
+      </main>
+
+      <div class="photo-credit" id="photoCredit"></div>
+    </div>
+
+    <div class="drawer-overlay" id="overlay"></div>
+    <div class="drawer" id="drawer">
+      <div class="drawer-title">Şehirler (81 İl)</div>
+      <input type="text" id="citySearch" class="city-search" placeholder="Şehir ara...">
+      <ul class="city-list" id="cityList"></ul>
+    </div>
+  </div>
+
+  <script src="weather.js"></script>
+</body>
+</html>
